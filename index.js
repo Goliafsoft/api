@@ -1,8 +1,10 @@
 const http = require('http');
-const port = 3002;
+const _ = require('lodash');
+
+const port = 8080;
 
 const requestHandler = (request, response) => {
-  response.end('api');
+  response.end(_.capitalize('api'));
 };
 
 const server = http.createServer(requestHandler);
